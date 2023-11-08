@@ -17,7 +17,7 @@ public class User {
     private String userId;
     @Column(name="USER_NAME",unique=true,length = 20)
     private String userName;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private  String password;
     @ManyToMany(mappedBy = "users",fetch= FetchType.EAGER)//charger les roles des utilisateurs
     private List<Role> roles=new ArrayList<>();
